@@ -1,4 +1,4 @@
-#include "Figure.h"
+п»ї#include "Figure.h"
 
 #include <iostream>
 #include <string>
@@ -10,5 +10,5 @@ void Figure::NewObj()
 
 string Figure::showFigureType()
 {
-	return "Какая-то фигура";
+	return "РљР°РєР°СЏ-С‚Рѕ С„РёРіСѓСЂР°";
 }

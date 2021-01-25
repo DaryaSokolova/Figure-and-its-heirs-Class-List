@@ -1,44 +1,44 @@
-#pragma once
+п»ї#pragma once
 #include "Figure.h"
 #include <string>
 
 using namespace std;
 
-//класс ПРЯМОУГОЛЬНИК
+//РєР»Р°СЃСЃ РџР РЇРњРћРЈР“РћР›Р¬РќРРљ
 class Rectangle : public Figure
 {
 private:
-    int width; //длина
-    int height; //высота
+    int width; //РґР»РёРЅР°
+    int height; //РІС‹СЃРѕС‚Р°
 
 public:
-    //конструктор
+    //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
     Rectangle(double w, double h);
 
-    //конструктор по умолчанию считается созданным неправильно
+    //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ СЃС‡РёС‚Р°РµС‚СЃСЏ СЃРѕР·РґР°РЅРЅС‹Рј РЅРµРїСЂР°РІРёР»СЊРЅРѕ
     Rectangle() { Status = Err; };
     ~Rectangle();
 
 
-    //геттеры
+    //РіРµС‚С‚РµСЂС‹
     int getWidth();
     int gerHeight();
 
-    // специальный
+    // СЃРїРµС†РёР°Р»СЊРЅС‹Р№
     bool getStatus() override;
 
-    //сеттеры
+    //СЃРµС‚С‚РµСЂС‹
     bool setW(int w);
     bool setH(int h);
 
-    //ввод данных
+    //РІРІРѕРґ РґР°РЅРЅС‹С…
     void NewObj() override;
 
-    //площадь и периметр
+    //РїР»РѕС‰Р°РґСЊ Рё РїРµСЂРёРјРµС‚СЂ
     int getSquare() override;
     int getPerimeter() override;
 
-    //вывод данных
+    //РІС‹РІРѕРґ РґР°РЅРЅС‹С…
     string showFigureType() override;
 };
 

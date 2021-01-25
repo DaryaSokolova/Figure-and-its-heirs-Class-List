@@ -1,14 +1,14 @@
-#include "Figure.h"
+п»ї#include "Figure.h"
 #include "Rectangle.h"
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-//конструктор
+//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 Rectangle::Rectangle(double w, double h) : width(w), height(h) 
 {
-    if ((w > 0) && (h > 0)) //не могут длина и высота быть <=0
+    if ((w > 0) && (h > 0)) //РЅРµ РјРѕРіСѓС‚ РґР»РёРЅР° Рё РІС‹СЃРѕС‚Р° Р±С‹С‚СЊ <=0
     {
         width = w;
         height = h;
@@ -21,10 +21,10 @@ Rectangle::~Rectangle()
 {
 }
 
-//геттеры
+//РіРµС‚С‚РµСЂС‹
 int Rectangle::getWidth()
 {
-    if (Status == OK) //работать можем только с правильно созданными объектами
+    if (Status == OK) //СЂР°Р±РѕС‚Р°С‚СЊ РјРѕР¶РµРј С‚РѕР»СЊРєРѕ СЃ РїСЂР°РІРёР»СЊРЅРѕ СЃРѕР·РґР°РЅРЅС‹РјРё РѕР±СЉРµРєС‚Р°РјРё
     {
         return width;
     }
@@ -40,7 +40,7 @@ int Rectangle::gerHeight()
     else return -1;
 }
 
-//сеттеры
+//СЃРµС‚С‚РµСЂС‹
 bool Rectangle::setW(int w)
 {
     if (Status == OK)
@@ -77,12 +77,12 @@ bool Rectangle::setH(int h)
     else return false;
 }
 
-//ввод данных
+//РІРІРѕРґ РґР°РЅРЅС‹С…
 void Rectangle::NewObj()
 {
     if (Status == OK)
     {
-        cout << "Введите значения для Четырехугольника:" << endl;
+        cout << "Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёСЏ РґР»СЏ Р§РµС‚С‹СЂРµС…СѓРіРѕР»СЊРЅРёРєР°:" << endl;
 
         cout << "width=";
         int a;
@@ -94,7 +94,7 @@ void Rectangle::NewObj()
         cin >> b;
         setH(b);
     }
-    else cout << "Объект неправильно создан!" << endl;
+    else cout << "РћР±СЉРµРєС‚ РЅРµРїСЂР°РІРёР»СЊРЅРѕ СЃРѕР·РґР°РЅ!" << endl;
 }
 
 
@@ -103,7 +103,7 @@ bool Rectangle::getStatus()
     return Status;
 }
 
-//площадь
+//РїР»РѕС‰Р°РґСЊ
 int Rectangle::getSquare()
 {
     if (Status == OK)
@@ -113,7 +113,7 @@ int Rectangle::getSquare()
     else return -1;
 }
 
-//периметр
+//РїРµСЂРёРјРµС‚СЂ
 int Rectangle::getPerimeter()
 {
     if (Status == OK)
@@ -123,10 +123,10 @@ int Rectangle::getPerimeter()
     else return -1;
 }
 
-//вывоd данных
+//РІС‹РІРѕd РґР°РЅРЅС‹С…
 string Rectangle::showFigureType()
 {
-    if (Status == OK) //выводим инфмоацию только о праивльно созданном объекте
+    if (Status == OK) //РІС‹РІРѕРґРёРј РёРЅС„РјРѕР°С†РёСЋ С‚РѕР»СЊРєРѕ Рѕ РїСЂР°РёРІР»СЊРЅРѕ СЃРѕР·РґР°РЅРЅРѕРј РѕР±СЉРµРєС‚Рµ
     {
         return "Rectangle, width= " + to_string(width) 
             + ", height= " + to_string(height) 

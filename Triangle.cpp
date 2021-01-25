@@ -1,14 +1,14 @@
-#include "Figure.h"
+п»ї#include "Figure.h"
 #include "Triangle.h"
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-//конструктор
+//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 Triangle::Triangle(int a1, int a2, int a3) : A1(a1), A2(a2), A3(a3) 
 { 
-    if ((a1 > 0) && (a2 > 0) && (a3 > 0)) //у треугольника не может быть отрицательный длин сторон
+    if ((a1 > 0) && (a2 > 0) && (a3 > 0)) //Сѓ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Р№ РґР»РёРЅ СЃС‚РѕСЂРѕРЅ
     {
         Status = OK;
         A1 = a1;
@@ -22,10 +22,10 @@ Triangle::~Triangle()
 {
 }
 
-//геттеры
+//РіРµС‚С‚РµСЂС‹
 int Triangle::getA1()
 {
-    if (Status == OK) //рабоать можем только с правильно созданным треугольником
+    if (Status == OK) //СЂР°Р±РѕР°С‚СЊ РјРѕР¶РµРј С‚РѕР»СЊРєРѕ СЃ РїСЂР°РІРёР»СЊРЅРѕ СЃРѕР·РґР°РЅРЅС‹Рј С‚СЂРµСѓРіРѕР»СЊРЅРёРєРѕРј
     {
         return A1;
     }
@@ -55,7 +55,7 @@ bool Triangle::getStatus()
     return Status;
 }
 
-//сеттеры
+//СЃРµС‚С‚РµСЂС‹
 bool Triangle::setA1(int a1)
 {
     if (Status == OK)
@@ -110,12 +110,12 @@ bool Triangle::setA3(int a3)
     else return false;
 }
 
-//ввод данных
+//РІРІРѕРґ РґР°РЅРЅС‹С…
 void Triangle::NewObj()
 {
     if (Status == OK)
     {
-        cout << "Введите значения для Треугольника:" << endl;
+        cout << "Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёСЏ РґР»СЏ РўСЂРµСѓРіРѕР»СЊРЅРёРєР°:" << endl;
         cout << "A1=";
         int a;
         cin >> a;
@@ -131,10 +131,10 @@ void Triangle::NewObj()
         cin >> c;
         setA3(c);
     }
-    else cout << "Объект неправильно создан!" << endl;
+    else cout << "РћР±СЉРµРєС‚ РЅРµРїСЂР°РІРёР»СЊРЅРѕ СЃРѕР·РґР°РЅ!" << endl;
 }
 
-//площадь
+//РїР»РѕС‰Р°РґСЊ
 int Triangle::getSquare()
 {
     if (Status == OK)
@@ -145,7 +145,7 @@ int Triangle::getSquare()
     else return -1;
 }
 
-//периметр
+//РїРµСЂРёРјРµС‚СЂ
 int Triangle::getPerimeter()
 {
     if (Status == OK)
@@ -156,10 +156,10 @@ int Triangle::getPerimeter()
 }
 
 
-//вывод данных
+//РІС‹РІРѕРґ РґР°РЅРЅС‹С…
 string Triangle::showFigureType()
 {
-    if (Status == OK) //выводим информацию только о праивльно созданном треугольнике
+    if (Status == OK) //РІС‹РІРѕРґРёРј РёРЅС„РѕСЂРјР°С†РёСЋ С‚РѕР»СЊРєРѕ Рѕ РїСЂР°РёРІР»СЊРЅРѕ СЃРѕР·РґР°РЅРЅРѕРј С‚СЂРµСѓРіРѕР»СЊРЅРёРєРµ
     {
         return "Triangle, A1= " + to_string(A1)
             + ", A2= " + to_string(A2) + ", A3 = "

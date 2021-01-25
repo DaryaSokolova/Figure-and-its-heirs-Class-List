@@ -1,47 +1,47 @@
-#pragma once
+п»ї#pragma once
 
 #include "Figure.h"
 #include <string>
 
 using namespace std;
 
-//класс ТРЕУГОЛЬНИК - наследник класса ФИГУРА
+//РєР»Р°СЃСЃ РўР Р•РЈР“РћР›Р¬РќРРљ - РЅР°СЃР»РµРґРЅРёРє РєР»Р°СЃСЃР° Р¤РР“РЈР Рђ
 class Triangle : public Figure
 {
 private:
-    //стороны треугольника
+    //СЃС‚РѕСЂРѕРЅС‹ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°
     int A1;
     int A2;
     int A3;
 
 public:
-    //конструктор
+    //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
     Triangle(int a1, int a2, int a3);
 
-    //конструктор по умолчанию считается созданным непраивльно
+    //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ СЃС‡РёС‚Р°РµС‚СЃСЏ СЃРѕР·РґР°РЅРЅС‹Рј РЅРµРїСЂР°РёРІР»СЊРЅРѕ
     Triangle() { Status = Err; };
     ~Triangle();
 
-    //геттеры
+    //РіРµС‚С‚РµСЂС‹
     int getA1();
     int getA2();
     int getA3();
 
-    // специальный
+    // СЃРїРµС†РёР°Р»СЊРЅС‹Р№
     bool getStatus() override;
 
-    //сеттеры
+    //СЃРµС‚С‚РµСЂС‹
     bool setA1(int a1);
     bool setA2(int a2);
     bool setA3(int a3);
 
-    //ввод данных
+    //РІРІРѕРґ РґР°РЅРЅС‹С…
     void NewObj() override;
 
-    //площадь и периметр
+    //РїР»РѕС‰Р°РґСЊ Рё РїРµСЂРёРјРµС‚СЂ
     int getSquare() override;
     int getPerimeter() override;
 
-    //вывод данных
+    //РІС‹РІРѕРґ РґР°РЅРЅС‹С…
     string showFigureType() override;
 };

@@ -1,4 +1,4 @@
-#include "Figure.h"
+п»ї#include "Figure.h"
 #include "Circle.h"
 #include <iostream>
 #include <string>
@@ -8,7 +8,7 @@ using namespace std;
 
 Circle::Circle(int x, int y, int r) : X(x), Y(y), Radius(r) 
 {
-    //радиус не может быть <=0
+    //СЂР°РґРёСѓСЃ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ <=0
     if (r > 0)
     {
         Radius = r;
@@ -22,10 +22,10 @@ Circle::~Circle()
 }
 
 
-//геттеры
+//РіРµС‚С‚РµСЂС‹
 int Circle::getX()
 {
-    if (Status == OK) //работать млжем только с правильно созданной фигурой
+    if (Status == OK) //СЂР°Р±РѕС‚Р°С‚СЊ РјР»Р¶РµРј С‚РѕР»СЊРєРѕ СЃ РїСЂР°РІРёР»СЊРЅРѕ СЃРѕР·РґР°РЅРЅРѕР№ С„РёРіСѓСЂРѕР№
         return X;
     else return -1;
 }
@@ -51,7 +51,7 @@ bool Circle::getStatus()
     return Status;
 }
 
-//сеттеры
+//СЃРµС‚С‚РµСЂС‹
 bool Circle::setRadius(int r)
 {
     if (Status == OK)
@@ -69,7 +69,7 @@ bool Circle::setRadius(int r)
     else return false;
 }
 
-//сеттеры
+//СЃРµС‚С‚РµСЂС‹
 bool Circle::setX(int x)
 {
     if (Status == OK)
@@ -90,12 +90,12 @@ bool Circle::setY(int y)
     else return false;
 }
 
-//ввод данных с клавиатуры
+//РІРІРѕРґ РґР°РЅРЅС‹С… СЃ РєР»Р°РІРёР°С‚СѓСЂС‹
 void Circle::NewObj()
 {
     if (Status == OK)
     {
-        cout << "Введите значения для Круга:" << endl;
+        cout << "Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёСЏ РґР»СЏ РљСЂСѓРіР°:" << endl;
 
         cout << "X=";
         int a;
@@ -112,10 +112,10 @@ void Circle::NewObj()
         cin >> c;
         setRadius(c);
     }
-    else cout << "Объект неправильно создан!" << endl;
+    else cout << "РћР±СЉРµРєС‚ РЅРµРїСЂР°РІРёР»СЊРЅРѕ СЃРѕР·РґР°РЅ!" << endl;
 }
 
-//площадь
+//РїР»РѕС‰Р°РґСЊ
 int Circle::getSquare()
 {
     if (Status == OK)
@@ -125,7 +125,7 @@ int Circle::getSquare()
     else return -1;
 }
 
-//периметр
+//РїРµСЂРёРјРµС‚СЂ
 int Circle::getPerimeter()
 {
     if (Status == OK)
@@ -135,10 +135,10 @@ int Circle::getPerimeter()
     else return -1;
 }
 
-//вывод информации
+//РІС‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё
 std::string Circle::showFigureType()
 {
-    if (Status == OK) //можем вывести только правильно созданную фигуру
+    if (Status == OK) //РјРѕР¶РµРј РІС‹РІРµСЃС‚Рё С‚РѕР»СЊРєРѕ РїСЂР°РІРёР»СЊРЅРѕ СЃРѕР·РґР°РЅРЅСѓСЋ С„РёРіСѓСЂСѓ
     {
         return "Circle, X=" + to_string(X) + ", Y= " + to_string(Y) + ", radius= " + to_string(Radius) + ", Square=" + to_string(getSquare()) + ", Perimeter=" + to_string(getPerimeter());
     }

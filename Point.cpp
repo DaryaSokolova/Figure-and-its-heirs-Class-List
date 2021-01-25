@@ -1,11 +1,11 @@
-#include "Figure.h"
+п»ї#include "Figure.h"
 #include "Point.h"
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-//конструктор
+//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 Point::Point(int x, int y) 
 {
     X = x;
@@ -17,10 +17,10 @@ Point::~Point()
 {
 }
 
-//геттеры
+//РіРµС‚С‚РµСЂС‹
 int Point::getX()
 {
-    if (Status == OK) //работать млжем только с правильно созданным объектом
+    if (Status == OK) //СЂР°Р±РѕС‚Р°С‚СЊ РјР»Р¶РµРј С‚РѕР»СЊРєРѕ СЃ РїСЂР°РІРёР»СЊРЅРѕ СЃРѕР·РґР°РЅРЅС‹Рј РѕР±СЉРµРєС‚РѕРј
         return X;
     else return -1;
 }
@@ -32,13 +32,13 @@ int Point::getY()
     else return -1;
 }
 
-//статус
+//СЃС‚Р°С‚СѓСЃ
 bool Point::getStatus()
 {
     return Status;
 }
 
-//сеттеры
+//СЃРµС‚С‚РµСЂС‹
 bool Point::setX(int x)
 {
     if (Status == OK)
@@ -59,12 +59,12 @@ bool Point::setY(int y)
     else return false;
 }
 
-//ввод данных
+//РІРІРѕРґ РґР°РЅРЅС‹С…
 void Point::NewObj()
 {
     if (Status == OK)
     {
-        cout << "Введите значения для Точки:" << endl;
+        cout << "Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёСЏ РґР»СЏ РўРѕС‡РєРё:" << endl;
 
         cout << "X=";
         int a;
@@ -76,26 +76,26 @@ void Point::NewObj()
         cin >> b;
         setY(b);
     }
-    else cout << "Объект неправильно создан!";
+    else cout << "РћР±СЉРµРєС‚ РЅРµРїСЂР°РІРёР»СЊРЅРѕ СЃРѕР·РґР°РЅ!";
 }
 
 
-//площадь
+//РїР»РѕС‰Р°РґСЊ
 int Point::getSquare()
 {
     return -1;
 }
 
-//периметр
+//РїРµСЂРёРјРµС‚СЂ
 int Point::getPerimeter()
 {
     return -1;
 }
 
-//вывод данных
+//РІС‹РІРѕРґ РґР°РЅРЅС‹С…
 string Point::showFigureType()
 {
-    if (Status == OK) //выводим только правильно созданную точку
+    if (Status == OK) //РІС‹РІРѕРґРёРј С‚РѕР»СЊРєРѕ РїСЂР°РІРёР»СЊРЅРѕ СЃРѕР·РґР°РЅРЅСѓСЋ С‚РѕС‡РєСѓ
     {
         return "Point, X= " + to_string(X) + ", Y= " + to_string(Y);
     }

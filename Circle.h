@@ -1,46 +1,46 @@
-#pragma once
+п»ї#pragma once
 #include "Figure.h"
 #include "Point.h"
 #include <string>
 
 using namespace std;
 
-//класс КРУГ - наследник класса ФИГУРА
+//РєР»Р°СЃСЃ РљР РЈР“ - РЅР°СЃР»РµРґРЅРёРє РєР»Р°СЃСЃР° Р¤РР“РЈР Рђ
 class Circle : public Figure
 {
 public:
-    //конструктор
+    //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
     Circle(int x, int y, int r);
 
-    //по умолчанию является неверным
+    //РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ СЏРІР»СЏРµС‚СЃСЏ РЅРµРІРµСЂРЅС‹Рј
     Circle() { Status = Err; };
     ~Circle();
 
-    //геттеры
+    //РіРµС‚С‚РµСЂС‹
     int getX();
     int getY();
     int getRadius();
-    //сеттеры
+    //СЃРµС‚С‚РµСЂС‹
     bool setX(int x);
     bool setY(int y);
     bool setRadius(int r);
 
-    // специальный
+    // СЃРїРµС†РёР°Р»СЊРЅС‹Р№
     bool getStatus() override;
 
-    //ввод данных с клавиатуры
+    //РІРІРѕРґ РґР°РЅРЅС‹С… СЃ РєР»Р°РІРёР°С‚СѓСЂС‹
     void NewObj() override;
 
-    //площадь, периметр
+    //РїР»РѕС‰Р°РґСЊ, РїРµСЂРёРјРµС‚СЂ
     int getSquare() override;
     int getPerimeter() override;
 
-    //вывод
+    //РІС‹РІРѕРґ
     string showFigureType() override;
 
 private:
-    int X; //координата Х центра круга
-    int Y; //координата У центра круга
-    int Radius; //радиус
+    int X; //РєРѕРѕСЂРґРёРЅР°С‚Р° РҐ С†РµРЅС‚СЂР° РєСЂСѓРіР°
+    int Y; //РєРѕРѕСЂРґРёРЅР°С‚Р° РЈ С†РµРЅС‚СЂР° РєСЂСѓРіР°
+    int Radius; //СЂР°РґРёСѓСЃ
 };
 
